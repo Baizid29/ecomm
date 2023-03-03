@@ -1,0 +1,44 @@
+<nav class="nav">
+	<!-- whenever seller clickon logo it will jump to home page  -->
+	<h1><a routerLink=""> One Click Shop</a></h1> 
+	<!-- this ngif menuType works as when it is default and user loggedin the navsearch show when it is seller route it will not show navbar. !== seller means for every route is show only don't on 'seller' -->
+	<div *ngIf="menuType !=='seller'" class="nav-search">
+		<input type="text" #searchInput placeholder="Serach Product" (keyup)="searchProduct($event)" (blur)="hideSearch()">
+		<button (click)="submitSearch(searchInput.value)">Search</button>
+		<ul class="suggested-search" *ngIf="searchResult">
+			<li *ngFor="let item of searchResult">
+				<!-- this event and function is work for search result without getting conflict bcz we pass unique id.  -->
+				<a (mousedown)="selectedSearchResult(item.id)">{{item.name}}</a>
+			</li>
+		</ul>
+	</div>
+
+	<div [ngSwitch]="menuType">
+
+		<ul *ngSwitchCase=" 'default' ">
+			<li><a routerLink="seller-auth">Seller</a></li>
+			<li><a routerLink="">Home</a></li>
+			<li><a routerLink="user-auth">Login/Sign-up</a></li>
+			<li><a href="#">Cart({{cartItems}})</a></li>
+		</ul>
+
+		<ul *ngSwitchCase=" 'user' ">
+			<li><a routerLink="seller-auth">Seller</a></li>
+			<li><a routerLink="">Home</a></li>
+			<li><a routerLink="my-orders">My Orders</a></li>
+			<!-- Cart-page only works when user is loggedIn -->
+			<!-- if cart is 0 then it will not work  -->
+			<li><a [routerLink]="cartItems > 0 ? 'cart-page':null">Cart({{cartItems}})</a></li>
+			<li><a (click)="userLogout()">Logout</a></li>
+			<li><a>{{userName | titlecase}}</a></li>
+		</ul>
+
+		<ul *ngSwitchCase=" 'seller' ">
+			<li><a routerLink="seller-add-product">Add Product</a></li>
+			<li><a routerLink="seller-home">List</a></li>
+			<li><a (click)="sellerLogout()">Logout</a></li>
+			<li><a >{{sellerName | titlecase}}</a></li>
+		</ul>
+	</div>
+
+</nav>

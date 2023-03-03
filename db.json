@@ -1,0 +1,98 @@
+{
+  "seller": [
+    {
+      "name": "Baizid",
+      "password": "12345",
+      "email": "abc@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "Arupa",
+      "password": "12345",
+      "email": "abcd@gmail.com",
+      "id": 2
+    }
+  ],
+  "products": [
+    {
+      "name": "I Phone 14",
+      "price": "140000",
+      "category": "Mobile",
+      "color": "Red",
+      "description": "This is Apple product",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14-pro.jpg",
+      "id": 1
+    },
+    {
+      "name": "Samsung S21 FE",
+      "price": "75000",
+      "category": "Mobile",
+      "color": "orange",
+      "description": "This is a Samsung product",
+      "image": "https://images.samsung.com/is/image/samsung/p6pim/in/galaxy-s21/gallery/in-galaxy-s21-5g-g991-371114-371114-sm-g991bzidinu-thumb-368339358",
+      "id": 2
+    },
+    {
+      "name": "HP 310 Laptop",
+      "price": "75000",
+      "category": "Laptop",
+      "color": "Grey",
+      "description": "This is a Hp Laptop",
+      "image": "https://cdn1.smartprix.com/rx-ixUZqmGQy-w420-h420/hp-pavilion-15-eg100.jpg",
+      "id": 3
+    },
+    {
+      "name": "Noise Earbuds pro",
+      "price": "4000",
+      "category": "Ear Buds",
+      "color": "White",
+      "description": "This is a Noise Ear buds",
+      "image": "https://cdn1.smartprix.com/rx-iyGbRNM8w-w1200-h1200/yGbRNM8w.jpg",
+      "id": 4
+    }
+  ],
+  "users": [
+    {
+      "name": "phone",
+      "email": "phonetest@gmail.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "name": "Sk Baizid",
+      "email": "baizidtest@gmail.com",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "name": "Arupa",
+      "email": "arupatest@gmail.com",
+      "password": "123456",
+      "id": 3
+    }
+  ],
+  "cart": [
+    {
+      "name": "I Phone 14",
+      "price": "140000",
+      "category": "Mobile",
+      "color": "Red",
+      "description": "This is Apple product",
+      "image": "https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-14-pro.jpg",
+      "quantity": 1,
+      "productId": 1,
+      "userId": 1,
+      "id": 2
+    }
+  ],
+  "orders": [
+    {
+      "email": "baizidtest@gmail.com",
+      "address": "Jajpur,Odisha",
+      "mobile": "1234567890",
+      "totalPrice": 133100,
+      "userId": 2,
+      "id": 1
+    }
+  ]
+}
